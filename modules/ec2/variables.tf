@@ -16,3 +16,8 @@ variable "instance_type" {
 variable "public_cidr" {
   default = ["0.0.0.0/0"]
 }
+
+# Keys
+variable "key_name" {
+  type = "string"
+}
