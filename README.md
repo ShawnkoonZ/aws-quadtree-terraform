@@ -6,9 +6,19 @@ Terraform to setup QuadTree environment on AWS to apply DevOps practice.
 - https://blog.gruntwork.io/an-introduction-to-terraform-f17df9c6d180
 - https://www.terraform.io/intro/index.html
 - http://www.darwinrecruitment.com/news/what-is-terraform-and-how-is-it-changing-devops-technologies-68233/
+- https://www.terraform.io/docs/providers/aws/index.html
 
 
 ## Run
+
+1. Export AWS_ACCESS_KEY_ID , AWS_SECRET_ACCESS_KEY to Environment Variable.
+  http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#cli-environment
+
+2. Browse Into env/prod folder.
+
+3. Run following commands.
+
+<br>
 
 ```$ terraform get```
 > Usage: terraform get [options] PATH<br>
