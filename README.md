@@ -34,3 +34,27 @@ unless the -update flag is specified.
 
   If a saved plan is passed as an argument, this command will output
   the saved plan contents. It will not modify the given plan.
+
+  ---------
+  ```$ terraform apply```
+  > Usage: terraform apply [options] [DIR-OR-PLAN]
+
+  Builds or changes infrastructure according to Terraform configuration
+  files in DIR.
+
+  By default, apply scans the current directory for the configuration
+  and applies the changes appropriately. However, a path to another
+  configuration or an execution plan can be provided. Execution plans can be
+  used to only execute a pre-determined set of actions.
+
+  DIR can also be a SOURCE as given to the "init" command. In this case,
+  apply behaves as though "init" was called followed by "apply". This only
+  works for sources that aren't files, and only if the current working
+  directory is empty of Terraform files. This is a shortcut for getting
+  started.
+
+  ---------
+  ``` $ terraform destroy```
+  > Usage: terraform destroy [options] [DIR]
+
+  Destroy Terraform-managed infrastructure.
