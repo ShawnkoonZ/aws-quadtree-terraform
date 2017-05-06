@@ -64,6 +64,13 @@ unless the -update flag is specified.
   started.
 
   ---------
+  ```$ terraform show```
+  > Usage: terraform show [options] [path]
+
+  Reads and outputs a Terraform state or plan file in a human-readable
+  form. If no path is specified, the current state will be shown.
+
+  ---------
   ``` $ terraform destroy```
   > Usage: terraform destroy [options] [DIR]
 
