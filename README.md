@@ -6,9 +6,19 @@ Terraform to setup QuadTree environment on AWS to apply DevOps practice.
 - https://blog.gruntwork.io/an-introduction-to-terraform-f17df9c6d180
 - https://www.terraform.io/intro/index.html
 - http://www.darwinrecruitment.com/news/what-is-terraform-and-how-is-it-changing-devops-technologies-68233/
+- https://www.terraform.io/docs/providers/aws/index.html
 
 
 ## Run
+
+1. Export AWS_ACCESS_KEY_ID , AWS_SECRET_ACCESS_KEY to Environment Variable.
+  http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#cli-environment
+
+2. Browse Into env/prod folder.
+
+3. Run following commands.
+
+<br>
 
 ```$ terraform get```
 > Usage: terraform get [options] PATH<br>
@@ -34,3 +44,34 @@ unless the -update flag is specified.
 
   If a saved plan is passed as an argument, this command will output
   the saved plan contents. It will not modify the given plan.
+
+  ---------
+  ```$ terraform apply```
+  > Usage: terraform apply [options] [DIR-OR-PLAN]
+
+  Builds or changes infrastructure according to Terraform configuration
+  files in DIR.
+
+  By default, apply scans the current directory for the configuration
+  and applies the changes appropriately. However, a path to another
+  configuration or an execution plan can be provided. Execution plans can be
+  used to only execute a pre-determined set of actions.
+
+  DIR can also be a SOURCE as given to the "init" command. In this case,
+  apply behaves as though "init" was called followed by "apply". This only
+  works for sources that aren't files, and only if the current working
+  directory is empty of Terraform files. This is a shortcut for getting
+  started.
+
+  ---------
+  ```$ terraform show```
+  > Usage: terraform show [options] [path]
+
+  Reads and outputs a Terraform state or plan file in a human-readable
+  form. If no path is specified, the current state will be shown.
+
+  ---------
+  ``` $ terraform destroy```
+  > Usage: terraform destroy [options] [DIR]
+
+  Destroy Terraform-managed infrastructure.

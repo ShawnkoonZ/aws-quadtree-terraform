@@ -4,14 +4,8 @@ variable "region" {
   description = "Region to deploy infrastructure."
 }
 
-# Credentials
-variable "access_key" {
-  # will be prompt.
-  description = "Access Key to the infrastructure."
+# Keys
+variable "key_name" {
+  type = "string"
+  description = "Type name of key pair to apply"
 }
-
-variable "secret_key" {
-  # will be prompt.
-  description = "Secret Key to the infrastructure."
-}
-
