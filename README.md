@@ -30,10 +30,38 @@ This recursively downloads all modules needed, such as modules
 imported by modules imported by the root and so on. If a module is
 already downloaded, it will not be redownloaded or checked for updates
 unless the -update flag is specified.
+  
+  ----------
+  ```$ terraform init```
+  > Usage: terraform init [options] [SOURCE] [PATH]
 
-----------
-```$ terraform plan```
-> Usage: terraform plan [options] [DIR-OR-PLAN]
+  Initialize a new or existing Terraform environment by creating
+  initial files, loading any remote state, downloading modules, etc.
+
+  This is the first command that should be run for any new or existing
+  Terraform configuration per machine. This sets up all the local data
+  necessary to run Terraform that is typically not comitted to version
+  control.
+
+  This command is always safe to run multiple times. Though subsequent runs
+  may give errors, this command will never blow away your environment or state.
+  Even so, if you have important information, please back it up prior to
+  running this command just in case.
+
+  If no arguments are given, the configuration in this working directory
+  is initialized.
+
+  If one or two arguments are given, the first is a SOURCE of a module to
+  download to the second argument PATH. After downloading the module to PATH,
+  the configuration will be initialized as if this command were called pointing
+  only to that PATH. PATH must be empty of any Terraform files. Any
+  conflicting non-Terraform files will be overwritten. The module download
+  is a copy. If you're downloading a module from Git, it will not preserve
+  Git history.
+
+  ----------
+  ```$ terraform plan```
+  > Usage: terraform plan [options] [DIR-OR-PLAN]
 
   **Generates an execution plan for Terraform.**
 

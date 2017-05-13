@@ -1,7 +1,7 @@
 resource "aws_instance" "shawnkoonz_quadtree_main" {
-  ami             = "${var.ami}"
-  instance_type   = "${var.instance_type}"
-  key_name = "${var.key_name}"
+  ami                    = "${var.ami}"
+  instance_type          = "${var.instance_type}"
+  key_name               = "${var.key_name}"
   vpc_security_group_ids = ["${aws_security_group.public_quadtree_sg.id}"]
 
   tags {
