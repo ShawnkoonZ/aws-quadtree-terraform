@@ -7,6 +7,7 @@ Terraform to setup QuadTree environment on AWS to apply DevOps practice.
 - https://www.terraform.io/intro/index.html
 - http://www.darwinrecruitment.com/news/what-is-terraform-and-how-is-it-changing-devops-technologies-68233/
 - https://www.terraform.io/docs/providers/aws/index.html
+- http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ProvisionedThroughput.html
 
 
 ## Run
@@ -103,3 +104,11 @@ unless the -update flag is specified.
   > Usage: terraform destroy [options] [DIR]
 
   Destroy Terraform-managed infrastructure.
+
+  ## MISC
+
+  1. IAM roles must be initialized with arn (I couldn't figure creating new one by code).
+
+  2. Lambda function needs to be uploaded into `shawnkoonz-quadtree-files/lambda` with *ZIP* ext.
+
+  3. Need to manually setup triggering event on lambda functions (Terrraform seems to not support this feature?).
