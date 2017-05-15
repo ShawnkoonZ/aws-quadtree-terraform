@@ -1,7 +1,7 @@
 # Ami
 variable "ami" {
   type        = "string"
-  default     = "ami-8ca83fec"
+  default     = "ami-4836a428"
   description = "AMI ID. default = 'Amazon Linux AMI 2017.03.0 (HVM)'"
 }
 

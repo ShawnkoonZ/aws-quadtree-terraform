@@ -14,9 +14,9 @@ resource "aws_security_group" "public_quadtree_sg" {
   }
 
   ingress {
-    from_port = 80
-    to_port = 80
-    protocol = "tcp"
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
     cidr_blocks = "${var.public_cidr}"
   }
 
